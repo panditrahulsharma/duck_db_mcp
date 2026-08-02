@@ -143,6 +143,30 @@ A typical configuration looks like this:
 }
 ```
 
+## Git MCP config
+
+If you also want to use Git-related MCP tools, you can add a Git MCP server configuration in the same client config. A typical example is:
+
+```json
+
+{
+  "mcpServers": {
+
+    "DuckDB SQL Server": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/panditrahulsharma/duck_db_mcp.git",
+        "duck_mcp"
+      ]
+    }
+  }
+}
+
+```
+
+This is useful when you want your MCP client to access Git operations such as status, diff, branch, and commit history while working with this project.
+
 ## Notes for contributors
 
 When adding or changing tools, make sure the docstring is clear and descriptive. A well-written docstring helps MCP clients understand what the tool does and how to use it correctly.
