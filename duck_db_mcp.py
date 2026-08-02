@@ -12,6 +12,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(SCRIPT_DIR, 'employee.duckdb')
 
 
+def main() -> None:
+    """Run the MCP server."""
+    mcp.run()
+
+
 @mcp.tool()
 def run_sql(sql: str) -> str:
     """
@@ -80,4 +85,4 @@ def run_sql(sql: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    main()
