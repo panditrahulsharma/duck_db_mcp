@@ -1,5 +1,7 @@
 # DuckDB MCP Server
 
+![Tool preview](images/tools.png)
+
 This project is a small Model Context Protocol (MCP) server that lets you query a DuckDB-based employee database through a simple tool interface. It is a beginner-friendly example for exploring how MCP servers work and how SQL can be exposed to AI assistants or local tools.
 
 If you are new to this project, the best way to start is:
