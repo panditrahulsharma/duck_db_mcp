@@ -143,6 +143,33 @@ A typical configuration looks like this:
 }
 ```
 
+## Install from GitHub
+
+If you want someone else to install this package directly from GitHub, use this command:
+
+```bash
+uvx --from git+https://github.com/panditrahulsharma/duck_db_mcp.git duck_mcp
+```
+
+For Claude Desktop, the config can look like this:
+
+```json
+{
+  "mcpServers": {
+    "DuckDB SQL Server": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/panditrahulsharma/duck_db_mcp.git",
+        "duck_mcp"
+      ]
+    }
+  }
+}
+```
+
+Make sure the latest changes in [pyproject.toml](pyproject.toml) and [duck_db_mcp.py](duck_db_mcp.py) have been committed and pushed to GitHub before trying this install method.
+
 ## Git MCP config
 
 If you also want to use Git-related MCP tools, you can add a Git MCP server configuration in the same client config. A typical example is:
